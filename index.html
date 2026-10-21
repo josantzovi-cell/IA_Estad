@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Resuelve dudas de estadística y aprende cada concepto paso a paso."
+    />
+    <title>Estadística · Asistente IA</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Navegación">
+        <a class="brand" href="/" aria-label="Inicio de Estadística IA">
+          <span class="brand-mark" aria-hidden="true">∑</span>
+          <span>estadística<span class="brand-light">.ia</span></span>
+        </a>
+
+        <button class="new-chat-button" id="new-chat" type="button">
+          <span aria-hidden="true">＋</span> Nueva conversación
+        </button>
+
+        <div class="sidebar-section">
+          <p class="sidebar-label">PARA EMPEZAR</p>
+          <button class="sidebar-prompt" type="button" data-prompt="Explícame la diferencia entre media, mediana y moda con un ejemplo sencillo.">
+            <span aria-hidden="true">◷</span> Conceptos básicos
+          </button>
+          <button class="sidebar-prompt" type="button" data-prompt="¿Cómo sé qué prueba estadística debo usar para mis datos?">
+            <span aria-hidden="true">⌁</span> Pruebas estadísticas
+          </button>
+          <button class="sidebar-prompt" type="button" data-prompt="Ayúdame a interpretar un valor p y un intervalo de confianza.">
+            <span aria-hidden="true">▤</span> Interpretar resultados
+          </button>
+        </div>
+
+        <div class="sidebar-note">
+          <span class="note-icon" aria-hidden="true">✳</span>
+          <p><strong>Aprende a tu ritmo</strong><br />Pregunta, practica y entiende la estadística paso a paso.</p>
+        </div>
+
+        <div class="sidebar-footer">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>Asistente listo</span>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <span class="mobile-brand"><span class="brand-mark" aria-hidden="true">∑</span> estadística.ia</span>
+          <span class="topbar-caption">Tu espacio de aprendizaje</span>
+          <span class="topbar-badge"><span class="status-dot" aria-hidden="true"></span> OpenAI integrado</span>
+        </header>
+
+        <section class="chat-layout" aria-label="Asistente de estadística">
+          <div class="chat-scroll" id="chat-scroll">
+            <div class="welcome" id="welcome">
+              <div class="welcome-icon" aria-hidden="true">∑</div>
+              <p class="eyebrow">ESTADÍSTICA, MÁS CLARA</p>
+              <h1>Entiende los datos.<br /><span>Confía en tus ideas.</span></h1>
+              <p class="welcome-copy">
+                Soy tu asistente de estadística. Puedo ayudarte con conceptos,
+                ejercicios e interpretación de resultados, paso a paso.
+              </p>
+
+              <div class="suggestions" aria-label="Preguntas sugeridas">
+                <button class="suggestion-card" type="button" data-prompt="¿Cuál es la media, mediana y moda de 2, 4, 4, 6 y 9? Explícalo paso a paso.">
+                  <span class="suggestion-icon violet" aria-hidden="true">∿</span>
+                  <span><strong>Resuelve un ejercicio</strong><small>Calcula medidas con un ejemplo</small></span>
+                  <span class="card-arrow" aria-hidden="true">↗</span>
+                </button>
+                <button class="suggestion-card" type="button" data-prompt="Explícame qué es la desviación estándar con una analogía sencilla.">
+                  <span class="suggestion-icon mint" aria-hidden="true">⌁</span>
+                  <span><strong>Aprende un concepto</strong><small>Entiende la desviación estándar</small></span>
+                  <span class="card-arrow" aria-hidden="true">↗</span>
+                </button>
+                <button class="suggestion-card" type="button" data-prompt="¿Qué diferencia hay entre correlación y causalidad? Dame un ejemplo.">
+                  <span class="suggestion-icon amber" aria-hidden="true">↗</span>
+                  <span><strong>Interpreta tus datos</strong><small>Correlación no es causalidad</small></span>
+                  <span class="card-arrow" aria-hidden="true">↗</span>
+                </button>
+                <button class="suggestion-card" type="button" data-prompt="Ayúdame a elegir una prueba estadística según mi pregunta y el tipo de datos.">
+                  <span class="suggestion-icon blue" aria-hidden="true">⌘</span>
+                  <span><strong>Elige una prueba</strong><small>Encuentra el análisis adecuado</small></span>
+                  <span class="card-arrow" aria-hidden="true">↗</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="messages" id="messages" aria-live="polite"></div>
+          </div>
+
+          <div class="composer-area">
+            <form class="composer" id="question-form">
+              <label class="sr-only" for="pregunta">Escribe tu pregunta de estadística</label>
+              <textarea
+                id="pregunta"
+                rows="1"
+                maxlength="2000"
+                placeholder="Pregúntame lo que quieras sobre estadística..."
+                required
+              ></textarea>
+              <div class="composer-bottom">
+                <span class="composer-hint">La IA puede equivocarse. Verifica los resultados importantes.</span>
+                <button class="send-button" id="send-button" type="submit" aria-label="Enviar pregunta">
+                  <span>Enviar</span><span aria-hidden="true">↑</span>
+                </button>
+              </div>
+            </form>
+            <p class="keyboard-hint">Enter para enviar <span>·</span> Shift + Enter para salto de línea</p>
+            <p class="creator-credit">Creado por <strong>Angel Tello</strong> y <strong>Antonio Alonzo</strong></p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="/app.js" defer></script>
+  </body>
+</html>
