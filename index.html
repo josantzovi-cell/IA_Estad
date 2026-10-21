@@ -50,7 +50,19 @@
         <header class="topbar">
           <span class="mobile-brand"><span class="brand-mark" aria-hidden="true">∑</span> estadística.ia</span>
           <span class="topbar-caption">Tu espacio de aprendizaje</span>
-          <span class="topbar-badge"><span class="status-dot" aria-hidden="true"></span> OpenAI integrado</span>
+          <div class="topbar-actions">
+            <button
+              class="theme-toggle"
+              id="theme-toggle"
+              type="button"
+              aria-label="Cambiar a modo oscuro"
+              aria-pressed="false"
+            >
+              <span id="theme-icon" aria-hidden="true">☾</span>
+              <span id="theme-label">Modo oscuro</span>
+            </button>
+            <span class="topbar-badge"><span class="status-dot" aria-hidden="true"></span> OpenAI integrado</span>
+          </div>
         </header>
 
         <section class="chat-layout" aria-label="Asistente de estadística">
@@ -85,6 +97,16 @@
                   <span><strong>Elige una prueba</strong><small>Encuentra el análisis adecuado</small></span>
                   <span class="card-arrow" aria-hidden="true">↗</span>
                 </button>
+                <button class="suggestion-card" type="button" data-prompt="Crea una tabla de frecuencias con estos datos: 2, 2, 3, 4, 4, 4, 5.">
+                  <span class="suggestion-icon mint" aria-hidden="true">▦</span>
+                  <span><strong>Crea una tabla</strong><small>Organiza datos y frecuencias</small></span>
+                  <span class="card-arrow" aria-hidden="true">↗</span>
+                </button>
+                <button class="suggestion-card" type="button" data-prompt="Haz una gráfica de barras con estos datos: promedio de horas de estudio, lunes 2, martes 3, miércoles 1 y jueves 4.">
+                  <span class="suggestion-icon violet" aria-hidden="true">▥</span>
+                  <span><strong>Genera una gráfica</strong><small>Visualiza datos con claridad</small></span>
+                  <span class="card-arrow" aria-hidden="true">↗</span>
+                </button>
               </div>
             </div>
 
@@ -110,6 +132,7 @@
             </form>
             <p class="keyboard-hint">Enter para enviar <span>·</span> Shift + Enter para salto de línea</p>
             <p class="creator-credit">Creado por <strong>Angel Tello</strong> y <strong>Antonio Alonzo</strong></p>
+            <p class="creator-program">Ingeniería en Sistemas</p>
           </div>
         </section>
       </main>
